@@ -1,15 +1,12 @@
-var express = require('express');
-var session = require('express-session');
-var serverStatic = require('serve-static');
-var app = express();
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
 const fs = require('fs');
 
 const items = ["Item 1", "Iteam 2", "Iteam 3", "Iteam 4"]
 
 app.set('views', './views');
-
-// Se indica el motor del plantillas a utilizar
-app.set('view engine', 'pug');
 
 // Sessions are used by web applications to remember data about specific users.
 // This is how when you login to a website, it remembers you for a while.
